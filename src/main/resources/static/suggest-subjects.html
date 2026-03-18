@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Aggregate Names</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="number"], select, textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #results { margin-top: 30px; padding: 15px; border: 1px solid #ddd; background-color: #f9f9f9; }
+        .name-list { list-style: none; padding: 0; }
+        .name-list li { margin: 5px 0; background-color: #fff; padding: 8px; border-bottom: 1px solid #eee; }
+        .error { color: red; }
+        .meta { font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        
+        /* Modal styles */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); }
+        .modal-content { background-color: #fefefe; margin: 5% auto; padding: 20px; border: 1px solid #888; width: 80%; max-height: 80vh; overflow: auto; border-radius: 8px; }
+        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .close:hover { color: black; }
+        pre { background-color: #f4f4f4; padding: 15px; border-radius: 5px; white-space: pre-wrap; word-wrap: break-word; }
+        .btn-secondary { background-color: #6c757d; margin-top: 10px; }
+        .btn-secondary:hover { background-color: #5a6268; }
+    </style>
+</head>
+<body>
+    <h1>Suggest Subjects</h1>
+    <p>Search for similar metadata nodes based on description to suggest their associated subjects as candidates.</p>
+
+    <div class="form-group">
+        <label for="nodeLabel">Node Label:</label>
+        <input type="text" id="nodeLabel" value="dataSetMetadata">
+    </div>
+
+    <div class="form-group">
+        <label for="testMetadataSelect">Select Title from Test Metadata:</label>
+        <select id="testMetadataSelect">
+            <option value="">-- Select a Title --</option>
+        </select>
+        <button id="actualSubjectsBtn" class="btn-secondary" style="margin-top: 5px; display: none;">actual subjects</button>
+        <div id="actualSubjectsContainer" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ccc; background-color: #eee;">
+            <strong>Actual Subjects:</strong> <span id="actualSubjectsText"></span><br>
+            <strong>DOI:</strong> <span id="actualDoiText"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="queryText">Search Query (up to 600 characters):</label>
+        <textarea id="queryText" placeholder="e.g., weather patterns" maxlength="1000" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="topK">Top K (Number of similar nodes):</label>
+        <input type="number" id="topK" value="5" min="1" max="50">
+    </div>
+
+    <div class="form-group">
+        <label for="method">Search Method:</label>
+        <select id="method">
+            <option value="cosine">Cosine Similarity</option>
+            <option value="euclidean">Euclidean Distance</option>
+        </select>
+    </div>
+
+    <button id="searchBtn">Search</button>
+
+    <div id="results" style="display: none;">
+        <h2>Results</h2>
+        <div id="metaInfo" class="meta"></div>
+        <ul id="nameList" class="name-list"></ul>
+        <button id="viewJsonBtn" class="btn-secondary">View Raw JSON Response</button>
+    </div>
+
+    <!-- Modal for JSON Response -->
+    <div id="jsonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3>Raw JSON Response</h3>
+            <pre id="jsonContent"></pre>
+        </div>
+    </div>
+
+    <script>
+        let lastJsonResponse = null;
+        let testMetadata = [];
+
+        // Load test metadata
+        async function loadTestMetadata() {
+            try {
+                const response = await fetch('/testmetadata.json');
+                if (!response.ok) {
+                    throw new Error(`Failed to load testmetadata.json: ${response.status} ${response.statusText}`);
+                }
+                testMetadata = await response.json();
+                
+                const select = document.getElementById('testMetadataSelect');
+                testMetadata.forEach((item, index) => {
+                    const option = document.createElement('option');
+                    option.value = index;
+                    option.textContent = item.title;
+                    select.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error loading test metadata:', error);
+            }
+        }
+
+        document.getElementById('testMetadataSelect').addEventListener('change', (event) => {
+            const index = event.target.value;
+            const queryText = document.getElementById('queryText');
+            const actualBtn = document.getElementById('actualSubjectsBtn');
+            const actualContainer = document.getElementById('actualSubjectsContainer');
+            const actualText = document.getElementById('actualSubjectsText');
+            const actualDoiText = document.getElementById('actualDoiText');
+            
+            if (index !== "" && testMetadata[index]) {
+                queryText.value = testMetadata[index].description;
+                actualText.textContent = testMetadata[index].subject || "No subject available";
+                actualDoiText.textContent = testMetadata[index].doi || "No DOI available";
+                actualBtn.style.display = 'inline-block';
+            } else {
+                queryText.value = "";
+                actualText.textContent = "";
+                actualDoiText.textContent = "";
+                actualBtn.style.display = 'none';
+            }
+            actualContainer.style.display = 'none';
+        });
+
+        document.getElementById('actualSubjectsBtn').addEventListener('click', () => {
+            const container = document.getElementById('actualSubjectsContainer');
+            container.style.display = container.style.display === 'none' ? 'block' : 'none';
+        });
+
+        loadTestMetadata();
+
+        document.getElementById('searchBtn').addEventListener('click', async () => {
+            const nodeLabel = document.getElementById('nodeLabel').value;
+            const queryText = document.getElementById('queryText').value;
+            const topK = parseInt(document.getElementById('topK').value);
+            const method = document.getElementById('method').value;
+            
+            const resultsDiv = document.getElementById('results');
+            const metaInfo = document.getElementById('metaInfo');
+            const nameList = document.getElementById('nameList');
+            
+            if (!queryText) {
+                alert('Please enter a search query');
+                return;
+            }
+            
+            resultsDiv.style.display = 'block';
+            nameList.innerHTML = '<li>Searching...</li>';
+            metaInfo.innerHTML = '';
+            
+            try {
+                const response = await fetch('/api/embeddings/search/aggregate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ nodeLabel, queryText, topK, method })
+                });
+                
+                const data = await response.json();
+                lastJsonResponse = data;
+                
+                if (data.success) {
+                    const names = data.aggregatedNames || [];
+                    const count = data.namesCount || 0;
+                    
+                    metaInfo.innerText = `Found ${count} subjects from similar nodes.`;
+                    
+                    if (names.length === 0) {
+                        nameList.innerHTML = '<li>No names found.</li>';
+                    } else {
+                        nameList.innerHTML = names
+                            .sort()
+                            .map(name => `<li>${name}</li>`)
+                            .join('');
+                    }
+                } else {
+                    nameList.innerHTML = `<li class="error">Error: ${data.message}</li>`;
+                }
+            } catch (error) {
+                nameList.innerHTML = `<li class="error">Error: ${error.message}</li>`;
+                lastJsonResponse = { error: error.message };
+            }
+        });
+
+        // Modal Logic
+        const modal = document.getElementById("jsonModal");
+        const btn = document.getElementById("viewJsonBtn");
+        const span = document.getElementById("closeModal");
+        const jsonContent = document.getElementById("jsonContent");
+
+        btn.onclick = function() {
+            if (lastJsonResponse) {
+                jsonContent.textContent = JSON.stringify(lastJsonResponse, null, 2);
+                modal.style.display = "block";
+            } else {
+                alert("No response data available yet.");
+            }
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

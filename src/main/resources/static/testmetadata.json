@@ -1,0 +1,146 @@
+[
+  {
+    "doi": "doi:10.11588/data/04HPWW",
+    "title": "Cellular correlates of gray matter volume changes in magnetic resonance morphometry identified by two-photon microscopy [Dataset]",
+    "description": "This dataset accompanies the article of the same title in the journal Scientific Reports. It includes a) spreadsheets of data values for each plot in the main figures, b) all  raw image data from Two-Photon in vivo microscopy (2pii) c) Custom code d) representative subsets of segmentation label images, coordinates of reidentified nuclei and corresponding magnetic resonance images from all timepoints of one animal (ID S8).",
+    "subject": "Medicine, Health and Life Sciences"
+  },
+  {
+    "doi": "doi:10.15139/S3/DXQYMX",
+    "title": "Dissemination Materials",
+    "description": "Dissemination materials for the \"addressing migrant and seasonal farmworker health disparities with information resources\" grant (G08LM013198)",
+    "subject": "Agricultural Sciences; Medicine, Health and Life Sciences"
+  },
+  {
+    "doi": "doi:10.21421/D2/DOYRML",
+    "title": "Phenotypic evaluation data of short duration Pigeonpea varieties trial for year 2016-17",
+    "description": "This database contains phenotypic evaluation data of short duration Pigeon pea varietal trials for year 2016-17. The research work carried out at ICRISAT Center, Patancheru. Pigeonpea is a very important grain legume crop for food other uses in Asia and Africa. It is often cross-pollinated species with a diploid number of 2n= 2x22 and genome size of 858Mbp. Every year 50 to 100 and above new crosses (and also CMS hybrids) will be made evaluated in nurseries to develop new high yielding cultivars with adaptability to different climatic/agronomic zones. Based on their agronomic performance in nurseries for maturity time, branching pattern and number of branches, pod color, pod yield and other pest and diseases tolerance characters etc, the superior progenies will be selected and advanced to further generations. The  progenies selected based on preliminary/nursery data will be evaluated along with controls in replicated (twice or thrice) trials every year for further agronomic evaluation and selection. The agronomic data (days to 50% flowering and/or maturity, plant height, grain yield, grain size and color etc) of the progenies evaluated in years 2015 were presented herewith. The trial details and plot sizes were given. This data helps us to select and advance further. Finally the few best progenies among them will be evaluated in on-farm trials (OFTs) and in multi-location trials. The best performed progenies will be considered to promote/release in respective agronomic zones. \r\n\r\n<br><br>\r\n<b><a href=\"https://www.google.com/maps/d/embed?mid=1nnx8AdN98BFkndcdj7APHuZxPIM\">Experiment location on Google Map</a> </b>\r\n<br>\r\n<br>",
+    "subject": "Agricultural Sciences"
+  },
+  {
+    "doi": "doi:10.17528/CIFOR/DATA.00086",
+    "title": "Replication Data for: Impacts of drought and responses of rural populations in West Africa: a systematic review",
+    "description": "LIst of selected articles use to conducted a systematic review of the subject.\nThe queries is described in the supporting information documents.",
+    "subject": "Agricultural Sciences"
+  },
+  {
+    "doi": "doi:10.18130/V3/1UOVKO",
+    "title": "Data for: Interlaboratory study of digital volume correlation error due to X-ray computed tomography equipment and scan parameters",
+    "description": "The methods describing the acquisition of the dataset are described in the corresponding paper (submitted to Experimental Mechanics with the same title). In brief, six participating laboratories were asked to acquire a set of high-quality X-ray Computed Tomography (XCT) scans to test the repeatability and accuracy of image-based Digital Volume Correlation (DVC) displacement measurements. All participants independently developed their scan recipes and used different XCT equipment.",
+    "subject": "Engineering"
+  },
+  {
+    "doi": "doi:10.18130/V3/5W96LX",
+    "title": "Model for \"Life Cycle Meta-Analysis of Carbon Capture Pathways in Power Plants: Implications for Bioenergy with Carbon Capture and Storage\"",
+    "description": "Model for \"Life Cycle Meta-Analysis of Carbon Capture Pathways in Power Plants: Implications for Bioenergy with Carbon Capture and Storage\" by Bennett et al. Details of how to use the model and process the results are provided in Instructions.txt and README.md.",
+    "subject": "Engineering"
+  },
+  {
+    "doi": "doi:10.18130/V3/IKPFBV",
+    "title": "Model and Data for: Feasibility of Using sCO2 Turbines to Balance Load in Power Grids with a High Deployment of Solar Generation",
+    "description": "This dataset includes the model and data used in \"Feasibility of Using sCO2 Turbines to Balance Load in Power Grids with a High Deployment of Solar Generation\" by Bennett et al., available at https://doi.org/10.1016/j.energy.2019.05.143\r\n\r\nData is provided in two parts: 1) solar panel modeling and 2) BLIS. Part 1 contains measured solar generation and demand data from the University of Virginia and python scripts to project solar generation with a n increased deployment of solar panels. Part 2 contains the python model blis (Balancing Load of Intermittent), a characteristic-based transient power plant model. Part 2 also contains the simulation scripts and generated results reported in the article.",
+    "subject": "Engineering"
+  },
+  {
+    "doi": "doi:10.18710/E3W52Q",
+    "title": "Styring gjennom tildelingsbrev",
+    "description": "Datasettene inneholder oversikt over styring gjennom tildelingsbrev i sentralforvaltningen for et utvalg statlige virksomheter for 2012 og 2015 i Norge. Dataene inneholder oversikt over antall mål og aktiviteter. Vedlegg er også analysert. Fellesføringer og supplerende tildelingsbrev er ikke inkludert i datamaterialet.\r\n\r\nDataene er brukt i Askim, Jostein, Karl Hagen Bjurstrøm and Jonas Kjærvik (forthcoming) \"Quasi-contractual ministerial steering of state agencies: Its intensity, modes, and how agency characteristics matter\". International Public Management Journal.\r\nDatasettet IPMJ_replication.csv inneholder fullstendige replikasjonsdata.",
+    "subject": "Social Sciences"
+  },
+  {
+    "doi": "doi:10.18710/E3W52Q",
+    "title": "Styring gjennom tildelingsbrev",
+    "description": "The datasets contains an overview over steering through formal contracts in the Norwegian central government for a sample of government agencies in 2012 and 2015 in Norway. The data covers the number of goals/performance targets and behavioral demands. Contract attachments are also included. Shared goals for all government agencies and supplementary contracts are not included in the data. \r\n\r\nThe data is used in Askim, Jostein, Karl Hagen Bjurstrøm and Jonas Kjærvik (forthcoming) \"Quasi-contractual ministerial steering of state agencies: Its intensity, modes, and how agency characteristics matter\". International Public Management Journal.\r\nThe dataset IPMJ_replication.csv contains full replication data",
+    "subject": "Social Sciences"
+  },
+  {
+    "doi": "doi:10.18710/EBBMHF",
+    "title": "Replication Data for: Lenses on the Post-oil Economy: Integrating Entrepreneurship into Sustainability Education through Problem-Based Learning",
+    "description": "</p>Abstract: In the context of enormous global challenges such as climate change, poverty, and the unequal distribution of wealth, sustainability education within higher education has gained momentum as a tool to train a new generation of change agents. In practice, previous research has examined the relationship between sustainability education and entrepreneurship education. Both educational domains share similar teaching and learning frameworks as they both seek to train action-oriented professionals. Yet despite these similarities, there is a knowledge gap regarding course development strategies that can integrate entrepreneurship competencies into sustainability education. Following a classroom action research (AR) approach, we developed a three-week graduate course aimed at an interdisciplinary cohort of students in the social sciences from partner universities in Brazil and Norway. The course integrated a problem-based learning (PBL) framework. As part of the methodology, teachers introduced real-world challenges in the context of a post-extractive economic transition. Working in groups of four to five members, the students provided business solutions framed in a post-oil development context. The results indicate tension points in the integration of the learning principles of PBL along the different phases of PBL, namely during the group formation and problem analysis phases. To tackle these tensions, we propose that this type of course should facilitate early group formation and integrate formative feedback and progressive problem analysis. Our framework contributes to the debate on competence-based frameworks within the sustainability education literature. The framework can also serve as an inspiration for course designers in higher education.",
+    "subject": "Arts and Humanities; Business and Management; Social Sciences"
+  },
+  {
+    "doi": "doi:10.18738/T8/4ARWAH",
+    "title": "X-ray CT Scan of the CM2 Murchison chondrite meteorite (USNM 5487 MurchWhole)",
+    "description": "X-ray CT Scans of a meteorite (USNM 5487; CM2 chondrite meteorite) for Romy Hanna of the University of Texas DOGS. Specimen scanned by Romy Hanna and Richard Ketcham 28 February 2012.\r\nVoxel Size X and Y= 0.0537mm, Z= 0.05816 mm. Total final slices = 1016.\r\nPlease acknowledge The University of Texas High-Resolution X-ray CT Facility (UTCT), NASA grant NNX13AO64H, and Dr. Romy Hanna when using this data.",
+    "subject": "Astronomy and Astrophysics; Earth and Environmental Sciences"
+  },
+  {
+    "doi": "doi:10.18738/T8/BS0G9T",
+    "title": "Robert Burns Collection",
+    "description": "The Robert Burns collection includes five manuscripts and three letters written by the Scottish poet. Correspondents include Allan Cunningham, Robert Muir, and an unidentified recipient. Also present are an autograph of Burns' brother Gerald Burns and a manuscript containing an additional verse for \"Green Grow the Rashes\" by Robert Burns, Jr.",
+    "subject": "Arts and Humanities"
+  },
+  {
+    "doi": "doi:10.18738/T8/BTKJPV",
+    "title": "Exposición que el Gobernador de Quéretaro dirige a Santa Anna, 1834 Junio 05",
+    "description": "In this document, the governor of Querétaro, Jesus Garza Gonzales, insists to president Santa Anna that he holds no animosity towards “his excellency.”  He states that Santa Anna’s inner circle is lying to him about which persons are discontent with his ruling.  Gonzales appeals to Santa Anna’s favor by repeatedly praising him, stating that he knows the president will take heed because of his “kindness and greatness of soul.”  —— En este documento, el gobernador de Querétaro, Jesús Garza Gonzales, le insiste al presidente Santa Anna que no tiene animosidad hacia “su excelencia”. Afirma que el círculo íntimo de Santa Anna le está mintiendo sobre qué personas están descontentas con su decisión. Gonzáles apela al favor de Santa Anna elogiándolo repetidamente, afirmando que sabe que el presidente le prestará atención debido a su \"bondad ... y grandeza de alma.\" Extent: 3 p.",
+    "subject": "Arts and Humanities"
+  },
+  {
+    "doi": "doi:10.18738/T8/BXB2BI",
+    "title": "John Keats Collection",
+    "description": "The John Keats collection includes manuscripts and letters by the English Romantic poet. Present are fragments of poems \"Isabella\" and \"Lamia,\" as well as a manuscript of his verse tragedy \"Otho the Great.\" Two letters by Keats are included, written to his sister-in-law, Georgina Keats, and to John Hamilton Reynolds.",
+    "subject": "Arts and Humanities"
+  },
+  {
+    "doi": "doi:10.18738/T8/E5FQVH",
+    "title": "Stimulus Materials",
+    "description": "This dataset contains stimulus image files and stimulus presentation E-Prime scripts. XLS files are also included describing stimulus properties and categorization task details.",
+    "subject": "Computer and Information Science; Mathematical Sciences; Medicine, Health and Life Sciences; Physics; Social Sciences"
+  },
+  {
+    "doi": "doi:10.18738/T8/F55LN6",
+    "title": "Behavior Summary & Zeta Parameter Estimation Scripts",
+    "description": "These are the scripts to perform summary statistics and Markov modeling from the behavior data. Requires MATLAB and SPM12 toolbox (or higher version). Includes analysis results in XLS format.",
+    "subject": "Astronomy and Astrophysics; Computer and Information Science; Mathematical Sciences; Medicine, Health and Life Sciences; Physics; Social Sciences"
+  },
+  {
+    "doi": "doi:10.18738/T8/GQTOD8",
+    "title": "Mar4_MACH_0_3",
+    "description": "Data files produced by IonWake code used to produce the graphs in \"Dust Charging in Dynamic Ion Wakes\"",
+    "subject": "Physics"
+  },
+  {
+    "doi": "doi:10.18738/T8/HLC3QY",
+    "title": "Turbulent Pipe flow at Re_tau=180",
+    "description": "The data was extracted from a direct numerical simulation of fully developed turbulent pipe flow.  Contact Jie Yao (jie.yao@ttu.edu) for questions.\n\nNOTE: before publication, please check here for any updates to the data.",
+    "subject": "Physics"
+  },
+  {
+    "doi": "doi:10.18738/T8/ICEB0W",
+    "title": "EEG Preprocessing Scripts",
+    "description": "These are the preprocessing scripts used for the EEG data. Requires EEGLAB toolbox and Matlab 2017b or greater.",
+    "subject": "Astronomy and Astrophysics; Computer and Information Science; Mathematical Sciences; Medicine, Health and Life Sciences; Physics; Social Sciences"
+  },
+  {
+    "doi": "doi:10.18738/T8/KHF1AY",
+    "title": "Replication Data for: Aerobic Radical Polymerization Mediated by Microbial Metabolism",
+    "description": "Raw data used for computing averages, mathematical fits, NMR spectra, microscopy images, polymer characterization data.",
+    "subject": "Chemistry; Engineering; Medicine, Health and Life Sciences"
+  },
+  {
+    "doi": "doi:10.18738/T8/N3XJPB",
+    "title": "Stiffness and Strength of Stabilized Organic Soils—Part I/II: Experimental Database and Statistical Description for Machine Learning Modelling",
+    "description": "This paper presents the experimental database and corresponding statistical analysis (Part I), which serves as a basis to perform the corresponding parametric analysis and machine learning modelling (Part II) of a comprehensive study on organic soil strength and stiffness, stabilized via the wet soil mixing method. The experimental database includes unconfined compression tests performed under laboratory-controlled conditions to investigate the impact of soil type, the soil’s organic content, the soil’s initial natural water content, binder type, binder quantity, grout to soil ratio, water to binder ratio, curing time, temperature, curing relative humidity and carbon dioxide content on the stabilized organic specimens’ stiffness and strength. A descriptive statistical analysis complements the description of the experimental database, along with a qualitative study on the stabilization hydration process via scanning electron microscopy images. Results confirmed findings on the use of Portland cement alone and a mix of Portland cement with ground granulated blast furnace slag as suitable binders for soil stabilization. Findings on mixes including lime and magnesium oxide cements demonstrated minimal stabilization. Specimen size affected stiffness, but not the strength for mixes of peat and Portland cement. The experimental database, along with all produced data analyses, are available at the Texas Data Repository as indicated in the Data Availability Statement below, to allow for data reproducibility and promote the use of artificial intelligence and machine learning competing modelling techniques as the ones presented in Part II of this paper.",
+    "subject": "Chemistry; Computer and Information Science; Earth and Environmental Sciences; Engineering"
+  },
+  {
+    "doi": "doi:10.18738/T8/L64SHD",
+    "title": "Egok360 A 360 Egocentric Kinetic Human Activity Video Dataset",
+    "description": "Recently, there has been a growing interest in wearable sensors which provides new research perspectives for 360 ° video analysis. However, the lack of 360 ° datasets in literature hinders the research in this field. To bridge this gap, in this paper we propose a novel Egocentric (first-person) 360° Kinetic human activity video dataset (EgoK360). The EgoK360 dataset contains annotations of human activity with different sub-actions, e.g., activity Ping-Pong with four sub-actions which are pickup-ball, hit, bounce-ball and serve. To the best of our knowledge, EgoK360 is the first dataset in the domain of first-person activity recognition with a 360° environmental setup, which will facilitate the egocentric 360 ° video understanding. We provide experimental results and comprehensive analysis of variants of the two-stream network for 360 egocentric activity recognition. The EgoK360 dataset can be downloaded from https://egok360.github.io/.",
+    "subject": "Computer and Information Science"
+  },
+  {
+    "doi": "doi:10.18738/T8/LG5E1W",
+    "title": "Daily Smartphone Sensing Features and Self-reported Sadness Scores, Averaged by the Participant",
+    "description": "Averaged daily smartphone sensing features / self-reported mental health outcomes by the participant, used to calculate the correlation/scatter plot matrix in the paper. Smartphone sensing data are available on a larger range of days than those on which self-reports were submitted; only the days on which both smartphone sensing and self-report data are available were used to compute these values. The last column in the data file, num.entries, indicates the number of days on which both data are available.\r\n\r\n1) acc.mag.rmssd: Root Mean Square of the Successive Differences in acceleration magnitude (unit: gravity)\r\n2) loc.var: square root of variance in raw GPS coordinates\r\n3) ent.pls: normalized Shannon entropy of the time spent at different significant places, determined by an established temporal coordinate clustering algorithm (Kang et al. 2005 \"Extracting places from traces of locations\")\r\n4) unlocked.dur: number of minutes the participant's smartphone stays unlocked\r\n5) mean.sadness: mean value of the daily end-of-day self-report of perceived sadness of the day, evaluated on a 4-point ordinal scale (0-3)\r\n6) sd.sadness: standard deviation of the daily end-of-day self-report of perceived sadness of the day, evaluated on a 4-point ordinal scale (0-3)",
+    "subject": "Computer and Information Science; Medicine, Health and Life Sciences; Social Sciences"
+  },
+  {
+    "doi": "doi:10.18738/T8/KKA6E1",
+    "title": "TX_LAMAR_1940",
+    "description": "Digitized index sheets and 69 photogrammetric scans of original aerial reel film from an aerial survey of Lamar County, Texas, taken November 15,1940. Scale is 1:20,000.",
+    "subject": "Agricultural Sciences; Earth and Environmental Sciences; Other"
+  }
+]
